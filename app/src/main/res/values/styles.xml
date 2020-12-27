@@ -1,0 +1,49 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="UiPageStyle.Default" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">@dimen/padding_5</item>
+    </style>
+
+    <style name="UiTextViewStyle">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="UiTextViewStyle.Header">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="UiTextInputLayoutStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/colorGrey_1</item>
+        <item name="endIconMode">custom</item>
+    </style>
+
+    <style name="UiButtonStyle" parent="TextAppearance.AppCompat.Button">
+        <item name="android:background">@drawable/ui_button_background</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="UiBody" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="UiBody.Strong" parent="UiBody">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="UiBody.HeaderX1" parent="UiBody">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

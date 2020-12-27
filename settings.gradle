@@ -1,0 +1,5 @@
+include ':core'
+include ':network-core'
+include ':network-library'
+include ':app'
+rootProject.name = "Exam Preparation"

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.aimids.exampreparation.listeners.ILoginPageListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/UiPageStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.login.LoginFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_login_header"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/image_header_content_description"
+            android:src="@drawable/logo01"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_login"
+            style="@style/UiTextViewStyle.Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/sign_in"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_view_login_header" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_lyt_email"
+            style="@style/UiTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:hint="@string/email"
+            app:endIconDrawable="@drawable/baseline_email_black_18dp"
+            app:layout_constraintTop_toBottomOf="@id/text_view_login">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_edit_txt_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_lyt_password"
+            style="@style/UiTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:hint="@string/password"
+            app:endIconDrawable="@drawable/baseline_lock_black_18dp"
+            app:layout_constraintTop_toBottomOf="@id/text_input_lyt_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_edit_txt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_login"
+            style="@style/UiButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:onClick="@{()->listener.onLoginButtonClick()}"
+            android:text="@string/sign_in"
+            app:layout_constraintTop_toBottomOf="@id/text_input_lyt_password" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_new_user"
+            style="@style/UiButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:onClick="@{()->listener.onNewUserButtonClick()}"
+            android:text="@string/new_user"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
