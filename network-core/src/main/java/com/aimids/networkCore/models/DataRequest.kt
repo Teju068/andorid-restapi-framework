@@ -7,7 +7,7 @@ data class DataRequest<TResult>(
     val requestMethod: HttpRequestMethod?,
     val pathSegment: String?,
     val queryParams: Map<String, String>?,
-    val body: Any?,
+    val body: String?,
     val headers: Headers,
     val tResult: Class<TResult>
 )

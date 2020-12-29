@@ -17,7 +17,7 @@ class ServiceOpRequestBuilder<TResult>(
     private var resultClass: Class<TResult>
 ) {
     private var queryParams: Map<String, String>? = null
-    private var body: Any? = null
+    private var body: String? = null
     private var headerMap = HashMap<String, String>()
 
     init {
@@ -70,5 +70,4 @@ class ServiceOpRequestBuilder<TResult>(
         }
         return headerBuilder.build()
     }
-
 }
