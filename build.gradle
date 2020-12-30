@@ -23,6 +23,10 @@ allprojects {
 
 ext {
 
+    compileSdkVersion = 30
+    targetSdkVersion = 30
+    minSdkVersion = 21
+
     // Android framework library
     appCompatVersion = "1.2.0"
     googleGsonVersion = "2.8.6"
