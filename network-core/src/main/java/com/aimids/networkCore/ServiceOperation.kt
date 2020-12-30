@@ -35,9 +35,9 @@ class ServiceOperation<T>(private val dataRequest: DataRequest<T>) {
 
     private fun constructUrl(@NonNull dataRequest: DataRequest<T>): String {
         val uriBuilder = HttpUrl.Builder()
-        uriBuilder.scheme(HttpScheme.HTTP.toString())
-        uriBuilder.port(8080)
-        uriBuilder.host(EndPointManager.LIVE_BASE_URL)
+        uriBuilder.scheme(HttpScheme.HTTP.name)
+        uriBuilder.port(EndPointManager.STAGE_PORT_NO)
+        uriBuilder.host(EndPointManager.STAGE_BASE_URL)
 
         if (dataRequest.pathSegment != null) {
             uriBuilder.addPathSegment(dataRequest.pathSegment)
